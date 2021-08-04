@@ -1,0 +1,11 @@
+{
+    "author" : ["Ghalban (Ghalban#1112)"],
+    "install_msg" : "Thanks for installing hawkeye.\nUse `[p]help Hawkeye for help.\nFollow me on GitHub! https://github.com/Ghalban",
+    "name" : "Hawkeye",
+    "short" : "Hawkeye looks up MSU related information for you.",
+    "requirements" : ["redbot, bs4, requests"],
+    "description" : "Hawkeye looks up and delivers MSU information to MSU student discord servers.",
+    "tags" : ["search", "utility", "university", "msu", "students"],
+    "min_python_version": [3, 8, 0],
+    "end_user_data_statement": "This cog does not store user data."
+}
