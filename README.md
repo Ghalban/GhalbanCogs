@@ -11,3 +11,6 @@ Oddly specific cogs for [Red-DiscordBot](https://github.com/Cog-Creators/Red-Dis
 | Cursed food        | ⬜️    |
 
 As of now package Hawkeye simply migrated some old code from [HawkBot](https://github.com/Ghalban/HawkBot) to an instance of Red
+
+### Contributors
+[![](https://github.com/Ghalban.png?size=50)](https://github.com/Ghalban)
