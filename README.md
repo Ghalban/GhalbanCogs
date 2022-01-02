@@ -1,5 +1,5 @@
 # GhalbanCogs
-Oddly specific cogs for [Red-DiscordBot](https://github.com/Cog-Creators/Red-DiscordBot) instance, Gryphon
+Oddly specific cogs for [Red-DiscordBot](https://github.com/Cog-Creators/Red-DiscordBot) instance, Gryphon: a private Discord bot.
 
 | Cog        | Task | Note |   
 |--------------------|-------|-----|
