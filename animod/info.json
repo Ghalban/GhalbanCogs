@@ -1,0 +1,11 @@
+{
+    "author" : ["Ghalban (Ghalban#1112)"],
+    "install_msg" : "Thanks for installing animod.\nUse `[p]help AniMod for help.\nFollow me on GitHub! https://github.com/Ghalban",
+    "name" : "AniMod",
+    "short" : "Hawkeye looks up MSU related information for you.",
+    "requirements" : ["redbot"],
+    "description" : "AniMod contains helpter functions for the Animation & Illustration server",
+    "tags" : ["search", "utility", "university", "msu", "students"],
+    "min_python_version": [3, 8, 0],
+    "end_user_data_statement": "This cog does not store user data."
+}

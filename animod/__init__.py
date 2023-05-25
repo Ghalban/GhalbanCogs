@@ -1,3 +1,4 @@
 from .animod import AniMod
-def setup(bot):
-    bot.add_cog(AniMod(bot))
+
+async def setup(bot): # async
+  await bot.add_cog(AniMod(bot)) # await
