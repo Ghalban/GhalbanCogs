@@ -2,14 +2,14 @@ import discord
 from redbot.core import commands
 
 class Hawkeye(commands.Cog):
-    """Commands to looks up MSU specific information for you."""
+    """Commands to look up MSU specific information from Discord."""
 
     def __init__(self, bot):
         self.bot = bot
 
     @commands.command()
     @commands.cooldown(1, 60, commands.BucketType.user)
-    async def search(self, ctx, *, keyWords=""):
+    async def find(self, ctx, *, keyWords=""):
         """Returns 3 search results scraped from MSU HawkEye search"""
         import requests
         from bs4 import BeautifulSoup
@@ -102,7 +102,7 @@ class Hawkeye(commands.Cog):
     @commands.command()
     async def links(self, ctx):
         """Links to help students start a new semester at MSU"""
-        with open("/home/Gryphon/.local/share/Red-DiscordBot/data/Gryphon/cogs/CogManager/cogs/hawkeye/links.md") as f:
+        with open("/home/opc/ /home/opc/.local/share/Red-DiscordBot/data/Gryphon/cogs/CogManager/cogs/hawkeye/links.md") as f:
             doc = f.read()
         embed = discord.Embed(
             title="Click the pretty blue hyperlinks to go places",
@@ -122,4 +122,3 @@ class Hawkeye(commands.Cog):
         
         await ctx.guild.get_channel(channel.id).send(message)
         return await ctx.tick()
-

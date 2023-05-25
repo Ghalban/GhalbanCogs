@@ -11,3 +11,9 @@
 ***Commuters***
 ➤ [Parking Permits](https://montclairstate.t2hosted.com/cmn/auth.aspx)
 ➤ [NJ Transit Student Discount Portal](https://njtransit.montclair.edu/njtransit/servlet)
+
+***Technology***
+➤ [Quick IT Guide](https://www.montclair.edu/information-technology/quick-it-guide-for-students/)
+➤ [IT Service Request](https://montclair.service-now.com/ess/)
+➤ [Citrix Virtual Computer Lab](https://citrix.montclair.edu/logon/LogonPoint/tmindex.html)
+➤ [Cloud Printing](https://pcut-app-prd1.montclair.edu:9192/user)
