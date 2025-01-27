@@ -1,16 +1,19 @@
 import discord
-from redbot.core import commands
+from redbot.core import commands, app_commands
 
 class AniMod(commands.Cog):
     """Commands for A&I Server"""
     
+    MOD = 878240352857886731    # ModRole
+    
     def __init__(self, bot):
         self.bot = bot
-    
-    @commands.command(pass_context=True)
-    @commands.has_role(878240352857886731)
-    async def verify(self, ctx: commands.Context, member: discord.Member):
 
+    @app_commands.command()
+    @app_commands.guild_only()
+    @app_commands.checks.has_role(MOD)
+    @app_commands.describe(member="member to verify")
+    async def verify(self, interaction: discord.Interaction, member: discord.Member):
         """Assigns `@Initiate` role to new member and welcomes them too!"""
         
         import random
@@ -26,22 +29,28 @@ class AniMod(commands.Cog):
             f"Welcome, {member.mention}! Please take a moment to look around the server.",
             f"Guys, say hello to my new friend {member.mention}!"
         )
-
-        initiate = ctx.guild.get_role(487854898692489227)
-
+    
+        initiate = interaction.guild.get_role(487854898692489227)
+    
         if initiate in member.roles:
-            return await ctx.send(f"{member.mention} is already verified.")
+            return await interaction.response.send_message(f"{member.mention} is already verified.", ephemeral=True)
 
         await member.add_roles(initiate)
-        await ctx.tick()
-        return await ctx.guild.get_channel(684822519865147403).send(random.choice(greeting))
+        await interaction.response.send_message("Verification complete!", ephemeral=False)
+        return await interaction.guild.get_channel(684822519865147403).send(random.choice(greeting))
 
-    @commands.command(pass_context=True)
-    @commands.has_role(878240352857886731)
-    async def grad(self, ctx: commands.Context, member: discord.Member):
+    @app_commands.command()
+    @app_commands.guild_only()
+    @app_commands.checks.has_role(MOD)
+    @app_commands.describe(member="member to graduate")
+    async def grad(self, interaction: discord.Interaction, member: discord.Member):
         """Assigns `@Alumni` and `@Master` roles to grads!"""
-        alumni = ctx.guild.get_role(657056079926001686)
-        master = ctx.guild.get_role(546873124944216075)
+        alumni = interaction.guild.get_role(657056079926001686)
+        master = interaction.guild.get_role(546873124944216075)
+
+        if alumni in member.roles:
+            return await interaction.response.send_message(f"{member.mention} is already an alumn.", ephemeral=True)
+        
         await member.add_roles(alumni, master)
-        await ctx.tick()
-        return await ctx.guild.get_channel(749397281924448326).send(f"{member.mention} is an `@Alumni`! Congrats!")
+        await interaction.response.send_message("Graduation complete!", ephemeral=False)
+        return await interaction.guild.get_channel(749397281924448326).send(f"{member.mention} is an `@Alumni`! Congrats!")
