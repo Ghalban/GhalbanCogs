@@ -7,7 +7,7 @@ Oddly specific cogs for [Red-DiscordBot](https://github.com/Cog-Creators/Red-Dis
 | animod       | Helpful functions for A&I server | Only verification helper is implemented. More to come 
 | eastereggs   | Random response to various triggers
 | wakeup       | Random message after a period of silence
-| 
+
 
 | Todo               | Have you lost sleep over this? | 
 |--------------------|-------|
