@@ -1,4 +1,4 @@
 from .hawkeye import Hawkeye
 
-async def setup(bot): # async
-  await bot.add_cog(Hawkeye(bot)) # await
+def setup(bot):
+    bot.add_cog(Hawkeye(bot))
